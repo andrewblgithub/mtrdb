@@ -1,0 +1,47 @@
+<%= form_for([@lab_result.patient, @lab_result]) do |f| %>
+  <% if @lab_result.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lab_result.errors.count, "error") %> prohibited this lab_result from being saved:</h2>
+
+      <ul>
+      <% @lab_result.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.date_select :date, id: :lab_result_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :creatinine %>
+    <%= f.number_field :creatinine, id: :lab_result_creatinine %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bilirubin %>
+    <%= f.number_field :bilirubin, id: :lab_result_bilirubin %>
+  </div>
+
+  <div class="field">
+    <%= f.label :albumin %>
+    <%= f.number_field :albumin, id: :lab_result_albumin %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hematocrit %>
+    <%= f.number_field :hematocrit, id: :lab_result_hematocrit %>
+  </div>
+
+  <div class="field">
+    <%= f.label :glucose %>
+    <%= f.number_field :glucose, id: :lab_result_glucose %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

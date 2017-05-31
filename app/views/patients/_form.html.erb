@@ -1,0 +1,102 @@
+<%= form_with(model: patient, local: true) do |form| %>
+  <% if patient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
+
+      <ul>
+      <% patient.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :mtid %>
+    <%= form.text_field :mtid, id: :patient_mtid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_of_birth %>
+    <%= form.date_select :date_of_birth, id: :patient_date_of_birth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sex %>
+    <%= form.text_field :sex, id: :patient_sex %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_of_admission %>
+    <%= form.date_select :date_of_admission, id: :patient_date_of_admission %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_of_discharge %>
+    <%= form.date_select :date_of_discharge, id: :patient_date_of_discharge %>
+  </div>
+
+  <div class="field">
+    <%= form.label :expired %>
+    <%= form.check_box :expired, id: :patient_expired %>
+  </div>
+
+  <div class="field">
+    <%= form.label :level_of_education %>
+    <%= form.text_field :level_of_education, id: :patient_level_of_education %>
+  </div>
+
+  <div class="field">
+    <%= form.label :primary_diagnosis %>
+    <%= form.text_field :primary_diagnosis, id: :patient_primary_diagnosis %>
+  </div>
+
+  <div class="field">
+    <%= form.label :brain_metastases %>
+    <%= form.check_box :brain_metastases, id: :patient_brain_metastases %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liver_metastases %>
+    <%= form.check_box :liver_metastases, id: :patient_liver_metastases %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hepatic_encephalopathy %>
+    <%= form.check_box :hepatic_encephalopathy, id: :patient_hepatic_encephalopathy %>
+  </div>
+
+  <div class="field">
+    <%= form.label :delirium %>
+    <%= form.check_box :delirium, id: :patient_delirium %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dementia %>
+    <%= form.check_box :dementia, id: :patient_dementia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cam %>
+    <%= form.check_box :cam, id: :patient_cam %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cva %>
+    <%= form.check_box :cva, id: :patient_cva %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nonverbal %>
+    <%= form.check_box :nonverbal, id: :patient_nonverbal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hearing_impaired %>
+    <%= form.check_box :hearing_impaired, id: :patient_hearing_impaired %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

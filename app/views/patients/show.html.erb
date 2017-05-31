@@ -1,0 +1,98 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>MTID:</strong>
+  <%= @patient.MTID %>
+</p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @patient.date_of_birth%>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= @patient.sex %>
+</p>
+
+<p>
+  <strong>Date of Admission:</strong>
+  <%= @patient.date_of_admission %>
+</p>
+
+<p>
+  <strong>Date of Discharge:</strong>
+  <%= @patient.date_of_discharge %>
+</p>
+
+<p>
+  <strong>Expired:</strong>
+  <%= @patient.expired %>
+</p>
+
+<p>
+  <strong>Level of Education:</strong>
+  <%= @patient.level_of_education %>
+</p>
+
+<p>
+  <strong>Primary Diagnosis:</strong>
+  <%= @patient.primary_diagnosis %>
+</p>
+
+<p>
+  <strong>Brain Metastases:</strong>
+  <%= @patient.brain_metastases %>
+</p>
+
+<p>
+  <strong>Liver Metastases:</strong>
+  <%= @patient.liver_metastases %>
+</p>
+
+<p>
+  <strong>Hepaticenc Ephalopathy:</strong>
+  <%= @patient.hepatic_encephalopathy %>
+</p>
+
+<p>
+  <strong>Delirium:</strong>
+  <%= @patient.delirium %>
+</p>
+
+<p>
+  <strong>Dementia:</strong>
+  <%= @patient.dementia %>
+</p>
+
+<p>
+  <strong>CAM:</strong>
+  <%= @patient.CAM %>
+</p>
+
+<p>
+  <strong>CVA:</strong>
+  <%= @patient.CVA %>
+</p>
+
+<p>
+  <strong>Nonverbal:</strong>
+  <%= @patient.nonverbal %>
+</p>
+
+<p>
+  <strong>Hearing Impaired:</strong>
+  <%= @patient.hearing_impaired %>
+</p>
+
+<%= link_to 'Edit', edit_patient_path(@patient) %> |
+<%= link_to 'Back', patients_path %>
+
+<hr>
+
+<%= link_to 'Lab Results', patient_lab_results_path(@patient) %> |
+<%= link_to 'Daily Opioids', patient_daily_opioids_path(@patient) %> |
+<%= link_to 'Pain Scores', patient_pain_scores_path(@patient) %> |
+<%= link_to 'Orientations', patient_orientations_path(@patient) %> |
+<%= link_to 'Music Therapy', patient_music_therapies_path(@patient) %>
+

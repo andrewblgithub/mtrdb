@@ -1,0 +1,31 @@
+<h1>Listing music_therapies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Passive or Active</th>
+      <th>Length of Visit</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @music_therapies.each do |music_therapy| %>
+      <tr>
+        <td><%= music_therapy.date %></td>
+        <td><%= music_therapy.passive_or_active %></td>
+        <td><%= music_therapy.length_of_visit %></td>
+        <td><%= link_to 'Show', [music_therapy.patient, music_therapy] %></td>
+        <td><%= link_to 'Edit', edit_patient_music_therapy_path(music_therapy.patient, music_therapy) %></td>
+        <td><%= link_to 'Destroy', [music_therapy.patient, music_therapy], :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Music therapy', new_patient_music_therapy_path(params[:patient_id]) %>
+<hr>
+<%= link_to 'Back', patient_path(params[:patient_id]) %>

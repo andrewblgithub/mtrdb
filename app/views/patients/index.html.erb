@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Patients</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>MTID</th>
+      <th>Date of Birth</th>
+      <th>Sex</th>
+      <th>Date of Admission</th>
+      <th>Date of Discharge</th>
+      <th>Expired</th>
+      <th>Level of Education</th>
+      <th>Primary Diagnosis</th>
+      <th>Brain Metastases</th>
+      <th>Liver Metastases</th>
+      <th>Hepaticenc Ephalopathy</th>
+      <th>Delirium</th>
+      <th>Dementia</th>
+      <th>CAM</th>
+      <th>CVA</th>
+      <th>Nonverbal</th>
+      <th>Hearing Impaired</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @patients.each do |patient| %>
+      <tr>
+        <td><%= link_to patient.MTID, patient %></td>
+        <td><%= patient.date_of_birth %></td>
+        <td><%= patient.sex %></td>
+        <td><%= patient.date_of_admission %></td>
+        <td><%= patient.date_of_discharge %></td>
+        <td><%= patient.expired %></td>
+        <td><%= patient.level_of_education %></td>
+        <td><%= patient.primary_diagnosis %></td>
+        <td><%= patient.brain_metastases %></td>
+        <td><%= patient.liver_metastases %></td>
+        <td><%= patient.hepatic_encephalopathy %></td>
+        <td><%= patient.delirium %></td>
+        <td><%= patient.dementia %></td>
+        <td><%= patient.CAM %></td>
+        <td><%= patient.CVA %></td>
+        <td><%= patient.nonverbal %></td>
+        <td><%= patient.hearing_impaired %></td>
+        <td><%= link_to 'Show', patient %></td>
+        <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
+        <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Patient', new_patient_path %>

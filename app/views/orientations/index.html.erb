@@ -1,0 +1,33 @@
+<h1>Listing orientations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Orientation 1</th>
+      <th>Orientation 2</th>
+      <th>Orientation 3</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orientations.each do |orientation| %>
+      <tr>
+        <td><%= orientation.date %></td>
+        <td><%= orientation.orientation_1 %></td>
+        <td><%= orientation.orientation_2 %></td>
+        <td><%= orientation.orientation_3 %></td>
+        <td><%= link_to 'Show', [orientation.patient, orientation] %></td>
+        <td><%= link_to 'Edit', edit_patient_orientation_path(orientation.patient, orientation) %></td>
+        <td><%= link_to 'Destroy', [orientation.patient, orientation], :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Orientation', new_patient_orientation_path(params[:patient_id]) %>
+<hr>
+<%= link_to 'Back', patient_path(params[:patient_id]) %>

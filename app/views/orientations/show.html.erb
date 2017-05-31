@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @orientation.date %>
+</p>
+
+<p>
+  <strong>Orientation 1:</strong>
+  <%= @orientation.orientation_3 %>
+</p>
+
+<p>
+  <strong>Orientation 2:</strong>
+  <%= @orientation.orientation_2 %>
+</p>
+
+<p>
+  <strong>Orientation 3:</strong>
+  <%= @orientation.orientation_3 %>
+</p>
+
+<%= link_to 'Edit', edit_patient_orientation_path(@orientation.patient, @orientation) %> |
+<%= link_to 'Back', patient_orientations_path(@orientation.patient) %>

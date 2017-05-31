@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @lab_result.date %>
+</p>
+
+<p>
+  <strong>Creatinine:</strong>
+  <%= @lab_result.creatinine %>
+</p>
+
+<p>
+  <strong>Bilirubin:</strong>
+  <%= @lab_result.bilirubin %>
+</p>
+
+<p>
+  <strong>Albumin:</strong>
+  <%= @lab_result.albumin %>
+</p>
+
+<p>
+  <strong>Hematocrit:</strong>
+  <%= @lab_result.hematocrit %>
+</p>
+
+<p>
+  <strong>Glucose:</strong>
+  <%= @lab_result.glucose %>
+</p>
+
+<%= link_to 'Edit', edit_patient_lab_result_path(@lab_result.patient, @lab_result) %> |
+<%= link_to 'Back', patient_lab_results_path(@lab_result.patient) %>

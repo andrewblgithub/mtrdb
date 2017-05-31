@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @music_therapy.date %>
+</p>
+
+<p>
+  <strong>Passive or Active:</strong>
+  <%= @music_therapy.passive_or_active %>
+</p>
+
+<p>
+  <strong>Length of Visit:</strong>
+  <%= @music_therapy.length_of_visit %>
+</p>
+
+<%= link_to 'Edit', edit_patient_music_therapy_path(@music_therapy.patient, @music_therapy) %> |
+<%= link_to 'Back', patient_music_therapies_path(@music_therapy.patient) %>

@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  MTID: MyString
+  DateOfBirth: 2017-05-30
+  Sex: MyString
+  DateOfAdmission: 2017-05-30
+  DateOfDischarge: 2017-05-30
+  Expired: false
+  LevelOfEducation: MyString
+  PrimaryDiagnosis: MyString
+  BrainMetastases: false
+  LiverMetastases: false
+  HepaticEncephalopathy: false
+  Delirium: false
+  Dementia: false
+  CAM: false
+  CVA: false
+  Nonverbal: false
+  HearingImpaired: false
+
+two:
+  MTID: MyString
+  DateOfBirth: 2017-05-30
+  Sex: MyString
+  DateOfAdmission: 2017-05-30
+  DateOfDischarge: 2017-05-30
+  Expired: false
+  LevelOfEducation: MyString
+  PrimaryDiagnosis: MyString
+  BrainMetastases: false
+  LiverMetastases: false
+  HepaticEncephalopathy: false
+  Delirium: false
+  Dementia: false
+  CAM: false
+  CVA: false
+  Nonverbal: false
+  HearingImpaired: false

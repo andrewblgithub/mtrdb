@@ -1,0 +1,33 @@
+<%= form_for([@music_therapy.patient, @music_therapy]) do |f| %>
+  <% if @music_therapy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@music_therapy.errors.count, "error") %> prohibited this music_therapy from being saved:</h2>
+
+      <ul>
+      <% @music_therapy.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :date %>
+    <%= f.date_select :date, id: :music_therapy_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label :passive_or_active %>
+    <%= f.text_field :passive_or_active, id: :music_therapy_passive_or_active %>
+  </div>
+
+  <div class="field">
+    <%= f.label :length_of_visit %>
+    <%= f.number_field :length_of_visit, id: :music_therapy_length_of_visit %>
+  </div>
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

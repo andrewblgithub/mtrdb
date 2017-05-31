@@ -1,0 +1,28 @@
+development: 
+  adapter: mysql2
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: root
+  password: <%= ENV['MTRDB_DATABASE_PASSWORD'] %> 
+  socket: /var/run/mysqld/mysqld.sock
+  database: MTRDB_development
+
+test:
+  adapter: mysql2
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: root
+  password: <%= ENV['MTRDB_DATABASE_PASSWORD'] %> 
+  socket: /var/run/mysqld/mysqld.sock
+  database: MTRDB_test
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: MTRDB 
+  password: <%= ENV['MTRDB_DATABASE_PASSWORD'] %>
+  socket: /var/run/mysqld/mysqld.sock
+  database: MTRDB_production
+  url: <%= ENV['DATABASE_URL'] %>
+
