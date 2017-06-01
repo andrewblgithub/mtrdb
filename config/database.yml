@@ -3,7 +3,7 @@ development:
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password: <%= ENV['MTRDB_DATABASE_PASSWORD'] %> 
+  password: pass 
   socket: /var/run/mysqld/mysqld.sock
   database: MTRDB_development
 
@@ -12,7 +12,7 @@ test:
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password: <%= ENV['MTRDB_DATABASE_PASSWORD'] %> 
+  password: pass 
   socket: /var/run/mysqld/mysqld.sock
   database: MTRDB_test
 

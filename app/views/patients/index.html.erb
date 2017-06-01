@@ -29,7 +29,7 @@
   <tbody>
     <% @patients.each do |patient| %>
       <tr>
-        <td><%= link_to patient.MTID, patient %></td>
+        <td><%= link_to patient.mtid, patient %></td>
         <td><%= patient.date_of_birth %></td>
         <td><%= patient.sex %></td>
         <td><%= patient.date_of_admission %></td>
@@ -42,8 +42,8 @@
         <td><%= patient.hepatic_encephalopathy %></td>
         <td><%= patient.delirium %></td>
         <td><%= patient.dementia %></td>
-        <td><%= patient.CAM %></td>
-        <td><%= patient.CVA %></td>
+        <td><%= patient.cam %></td>
+        <td><%= patient.cva %></td>
         <td><%= patient.nonverbal %></td>
         <td><%= patient.hearing_impaired %></td>
         <td><%= link_to 'Show', patient %></td>

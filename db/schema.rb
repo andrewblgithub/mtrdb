@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170530182554) do
+ActiveRecord::Schema.define(version: 20170601000506) do
 
   create_table "daily_opioids", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.date "date"
@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(version: 20170530182554) do
   end
 
   create_table "patients", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "MTID"
+    t.string "mtid"
     t.date "date_of_birth"
     t.string "sex"
     t.date "date_of_admission"
@@ -83,8 +83,8 @@ ActiveRecord::Schema.define(version: 20170530182554) do
     t.boolean "hepatic_encephalopathy"
     t.boolean "delirium"
     t.boolean "dementia"
-    t.boolean "CAM"
-    t.boolean "CVA"
+    t.boolean "cam"
+    t.boolean "cva"
     t.boolean "nonverbal"
     t.boolean "hearing_impaired"
     t.datetime "created_at", null: false
