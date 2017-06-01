@@ -59,6 +59,6 @@ class OrientationsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def orientation_params
-      params.require(:orientation).permit(:date, :orientation_1, :orientation_2, :orientation_3)
+      params.require(:orientation).permit(:day, :orientation_1, :orientation_2, :orientation_3)
     end
 end

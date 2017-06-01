@@ -6,10 +6,9 @@
   <thead>
     <tr>
       <th>MTID</th>
-      <th>Date of Birth</th>
+      <th>Age</th>
       <th>Sex</th>
-      <th>Date of Admission</th>
-      <th>Date of Discharge</th>
+      <th>Length of Stay</th>
       <th>Expired</th>
       <th>Level of Education</th>
       <th>Primary Diagnosis</th>
@@ -30,10 +29,9 @@
     <% @patients.each do |patient| %>
       <tr>
         <td><%= link_to patient.mtid, patient %></td>
-        <td><%= patient.date_of_birth %></td>
+        <td><%= patient.age %></td>
         <td><%= patient.sex %></td>
-        <td><%= patient.date_of_admission %></td>
-        <td><%= patient.date_of_discharge %></td>
+        <td><%= patient.length_of_stay %></td>
         <td><%= patient.expired %></td>
         <td><%= patient.level_of_education %></td>
         <td><%= patient.primary_diagnosis %></td>

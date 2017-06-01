@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Date</th>
+      <th>Day</th>
       <th>Pain Score 1</th>
       <th>Pain Score 2</th>
       <th>Pain Score 3</th>
@@ -14,7 +14,7 @@
   <tbody>
     <% @pain_scores.each do |pain_score| %>
       <tr>
-        <td><%= pain_score.date %></td>
+        <td><%= pain_score.day %></td>
         <td><%= pain_score.pain_score_1 %></td>
         <td><%= pain_score.pain_score_2 %></td>
         <td><%= pain_score.pain_score_3 %></td>

@@ -12,13 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :date %>
-    <%= f.date_select :date, id: :daily_opioid_date %>
-  </div>
-
-  <div class="field">
-    <%= f.label :order_number %>
-    <%= f.number_field :order_number, id: :daily_opioid_order_number %>
+    <%= f.label :day %>
+    <%= f.number_field :day, id: :daily_opioid_day %>
   </div>
 
   <div class="field">
@@ -27,8 +22,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :PRN %>
-    <%= f.check_box :PRN, id: :daily_opioid_PRN %>
+    <%= f.label :prn %>
+    <%= f.check_box :prn, id: :daily_opioid_prn %>
   </div>
 
   <div class="field">

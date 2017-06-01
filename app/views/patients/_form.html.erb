@@ -17,8 +17,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :date_of_birth %>
-    <%= form.date_select :date_of_birth, id: :patient_date_of_birth %>
+    <%= form.label :age %>
+    <%= form.text_field :age, id: :patient_age %>
   </div>
 
   <div class="field">
@@ -27,13 +27,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :date_of_admission %>
-    <%= form.date_select :date_of_admission, id: :patient_date_of_admission %>
-  </div>
-
-  <div class="field">
-    <%= form.label :date_of_discharge %>
-    <%= form.date_select :date_of_discharge, id: :patient_date_of_discharge %>
+    <%= form.label :length_of_stay %>
+    <%= form.number_field :length_of_stay, id: :patient_length_of_stay %>
   </div>
 
   <div class="field">

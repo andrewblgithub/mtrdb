@@ -59,6 +59,6 @@ class LabResultsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def lab_result_params
-      params.require(:lab_result).permit(:date, :creatinine, :bilirubin, :albumin, :hematocrit, :glucose)
+      params.require(:lab_result).permit(:day, :creatinine, :bilirubin, :albumin, :hematocrit, :glucose)
     end
 end

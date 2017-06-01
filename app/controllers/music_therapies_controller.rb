@@ -59,6 +59,6 @@ class MusicTherapiesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def music_therapy_params
-      params.require(:music_therapy).permit(:date, :passive_or_active, :length_of_visit)
+      params.require(:music_therapy).permit(:day, :passive_or_active, :length_of_visit)
     end
 end

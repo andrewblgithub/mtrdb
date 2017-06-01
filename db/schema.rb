@@ -10,13 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170601000506) do
+ActiveRecord::Schema.define(version: 20170601160801) do
 
   create_table "daily_opioids", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.date "date"
-    t.integer "order_number"
+    t.integer "day"
     t.string "type_of_opioid"
-    t.boolean "PRN"
+    t.boolean "prn"
     t.integer "dose"
     t.bigint "patient_id"
     t.datetime "created_at", null: false
@@ -25,7 +24,7 @@ ActiveRecord::Schema.define(version: 20170601000506) do
   end
 
   create_table "lab_results", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.date "date"
+    t.integer "day"
     t.integer "creatinine"
     t.integer "bilirubin"
     t.integer "albumin"
@@ -38,7 +37,7 @@ ActiveRecord::Schema.define(version: 20170601000506) do
   end
 
   create_table "music_therapies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.date "date"
+    t.integer "day"
     t.string "passive_or_active"
     t.integer "length_of_visit"
     t.bigint "patient_id"
@@ -48,7 +47,7 @@ ActiveRecord::Schema.define(version: 20170601000506) do
   end
 
   create_table "orientations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.date "date"
+    t.integer "day"
     t.integer "orientation_1"
     t.integer "orientation_2"
     t.integer "orientation_3"
@@ -59,7 +58,7 @@ ActiveRecord::Schema.define(version: 20170601000506) do
   end
 
   create_table "pain_scores", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.date "date"
+    t.integer "day"
     t.integer "pain_score_1"
     t.integer "pain_score_2"
     t.integer "pain_score_3"
@@ -71,10 +70,9 @@ ActiveRecord::Schema.define(version: 20170601000506) do
 
   create_table "patients", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "mtid"
-    t.date "date_of_birth"
+    t.string "age"
     t.string "sex"
-    t.date "date_of_admission"
-    t.date "date_of_discharge"
+    t.integer "length_of_stay"
     t.boolean "expired"
     t.string "level_of_education"
     t.string "primary_diagnosis"

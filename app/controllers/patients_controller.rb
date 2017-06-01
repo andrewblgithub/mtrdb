@@ -69,6 +69,6 @@ class PatientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def patient_params
-      params.require(:patient).permit(:mtid, :date_of_birth, :sex, :date_of_admission, :date_of_discharge, :expired, :level_of_education, :primary_diagnosis, :brain_metastases, :liver_metastases, :hepatic_encephalopathy, :delirium, :dementia, :cam, :cva, :nonverbal, :hearing_impaired)
+      params.require(:patient).permit(:mtid, :age, :sex, :length_of_stay, :expired, :level_of_education, :primary_diagnosis, :brain_metastases, :liver_metastases, :hepatic_encephalopathy, :delirium, :dementia, :cam, :cva, :nonverbal, :hearing_impaired)
     end
 end

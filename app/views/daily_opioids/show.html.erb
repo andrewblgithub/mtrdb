@@ -1,5 +1,24 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Day:</strong>
+  <%= @daily_opioid.day %>
+</p>
+
+<p>
+  <strong>Type of Opioid:</strong>
+  <%= @daily_opioid.type_of_opioid %>
+</p>
+
+<p>
+  <strong>PRN:</strong>
+  <%= @daily_opioid.prn %>
+</p>
+
+<p>
+  <strong>Dose:</strong>
+  <%= @daily_opioid.dose %>
+</p>
 
 <%= link_to 'Edit', edit_patient_daily_opioid_path(@daily_opioid.patient, @daily_opioid) %> |
 <%= link_to 'Back', patient_daily_opioids_path(@daily_opioid.patient) %>

@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   resources :patients do
     resources :daily_opioids
   end
+
   root 'patients#index'
 end

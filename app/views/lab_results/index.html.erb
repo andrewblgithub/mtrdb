@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Date</th>
+      <th>Day</th>
       <th>Creatinine</th>
       <th>Bilirubin</th>
       <th>Albumin</th>
@@ -16,7 +16,7 @@
   <tbody>
     <% @lab_results.each do |lab_result| %>
       <tr>
-        <td><%= lab_result.date %></td>
+        <td><%= lab_result.day %></td>
         <td><%= lab_result.creatinine %></td>
         <td><%= lab_result.bilirubin %></td>
         <td><%= lab_result.albumin %></td>

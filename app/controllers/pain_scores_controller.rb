@@ -59,6 +59,6 @@ class PainScoresController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def pain_score_params
-      params.require(:pain_score).permit(:date, :pain_score_1, :pain_score_2, :pain_score_3)
+      params.require(:pain_score).permit(:day, :pain_score_1, :pain_score_2, :pain_score_3)
     end
 end

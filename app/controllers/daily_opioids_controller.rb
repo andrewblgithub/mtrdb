@@ -59,6 +59,6 @@ class DailyOpioidsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def daily_opioid_params
-      params.require(:daily_opioid).permit(:date, :order_number, :type_of_opioid, :PRN, :dose)
+      params.require(:daily_opioid).permit(:day, :type_of_opioid, :PRN, :dose)
     end
 end

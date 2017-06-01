@@ -3,8 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Date</th>
-      <th>Order Number</th>
+      <th>Day</th>
       <th>Type of Opioid</th>
       <th>PRN</th>
       <th>Dose</th>
@@ -15,10 +14,9 @@
   <tbody>
     <% @daily_opioids.each do |daily_opioid| %>
       <tr>
-        <td><%= daily_opioid.date %></td>
-        <td><%= daily_opioid.order_number %></td>
+        <td><%= daily_opioid.day %></td>
         <td><%= daily_opioid.type_of_opioid %></td>
-        <td><%= daily_opioid.PRN %></td>
+        <td><%= daily_opioid.prn %></td>
         <td><%= daily_opioid.dose %></td>
         <td><%= link_to 'Show', [daily_opioid.patient, daily_opioid] %></td>
         <td><%= link_to 'Edit', edit_patient_daily_opioid_path(daily_opioid.patient, daily_opioid) %></td>
