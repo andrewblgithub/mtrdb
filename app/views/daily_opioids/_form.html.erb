@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= f.label :type_of_opioid %>
-    <%= f.text_field :type_of_opioid, id: :daily_opioid_type_of_opioid %>
+    <%= f.select :type_of_opioid, ['Morphine Parenteral', 'Morphine Nonparenteral', 'Hydromorphone Parenteral', 'Hydromorphone Nonparenteral', 'Methadone', 'Fentanyl', 'Oxycodone'], id: :daily_opioid_type_of_opioid %>
   </div>
 
   <div class="field">

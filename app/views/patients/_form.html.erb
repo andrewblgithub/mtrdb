@@ -18,12 +18,12 @@
 
   <div class="field">
     <%= form.label :age %>
-    <%= form.text_field :age, id: :patient_age %>
+    <%= form.select :age, ['18-29', '30-39', '40-49', '50-59', '60-69', '70-79', '80-89', '90+'], id: :patient_age %>
   </div>
 
   <div class="field">
     <%= form.label :sex %>
-    <%= form.text_field :sex, id: :patient_sex %>
+    <%= form.select :sex, ['Male', 'Female'] %>
   </div>
 
   <div class="field">
