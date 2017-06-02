@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admins, controllers: { registrations: "registrations" }
+
   resources :patients do
     resources :music_therapies
   end
